@@ -1,11 +1,13 @@
 body {
-    padding:20px;
+    padding:2%;
+    background-color: aqua;
   }
-  .container {
-      position: relative;
-      right: -350px;
-      top:-150px;
-  }
+
+.container {
+    position: fixed;
+    left: 0%;
+    top: 60%;
+}
   .image2 {/* band1 */
       /*display:inline;*/
       display: inline;
@@ -29,11 +31,12 @@ body {
   }
   .nav {
       position: absolute;
-      left: 400px;
+      left: 2%;
+
   }
   .nav2 {
       position: absolute;
-      left: 500px;
+      left: 20%;
   }
   
   a, a:hover

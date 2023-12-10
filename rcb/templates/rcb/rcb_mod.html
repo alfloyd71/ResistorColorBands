@@ -7,17 +7,21 @@
 <title>Resistor Color Bands - Modified</title>
 
 
-<link href="{% static 'rcb/css/main_ch08.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'rcb/css/theme.css' %}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="{% static 'rcb/css/rcb.css' %}">
 
 </head>
 <body>
+
+<a class ="nav" href="/">Home</a>
+<a class ="nav2" href="https://github.com/alfloyd71/ResistorColorBands">GitHub Repository</a>
+  <table style="padding-top: 10%;">
     <form action="" enctype ='multipart/form-data' method = "post" novalidate>
         {% csrf_token %}
-        <table>
+        
             <tr>
-                <th><label for="id_firstband">First Band:</label></th>
-                <td>
+                <th style="padding-bottom: 10%;"><label for="id_firstband">First Band:</label></th>
+                <td  style="padding-bottom: 10%;">
 
                   <select name="firstband" id="id_firstband" onchange="changeColor()">
 
@@ -73,10 +77,10 @@
 
                 </td>
               </tr>
-
+              
               <tr>
-                <th><label for="id_secondband">Second Band:</label></th>
-                <td>
+                <th style="padding-bottom: 10%;"><label for="id_secondband">Second Band:</label></th>
+                <td style="padding-bottom: 10%;">
 
                   <select onchange="changeColor()" name="secondband" id="id_secondband">
               <option value="Black"
@@ -136,8 +140,8 @@
               </tr>
 
               <tr>
-                <th><label for="id_thirdband">Multiplier:</label></th>
-                <td>
+                <th style="padding-bottom: 10%;"><label for="id_thirdband">Multiplier:</label></th>
+                <td style="padding-bottom: 10%;">
 
                   <select onchange="changeColor()" name="thirdband" id="id_thirdband">
               <option value="Black"
@@ -207,8 +211,8 @@
               </tr>
 
               <tr>
-                <th><label for="id_fourthband">Tolerance:</label></th>
-                <td>
+                <th style="padding-bottom: 10%;"><label for="id_fourthband">Tolerance:</label></th>
+                <td style="padding-bottom: 10%;">
 
                   <select onchange="changeColor()" name="fourthband" id="id_fourthband">
               <option value="Brown"
@@ -267,42 +271,28 @@
 
 
 
-                </td>
-              </tr>
+                
+</form>
+</td>
+</tr>
+  </table>
 
+  
+  {% autoescape off %}
 
+  <div class="container">
+      <img border = 0 src="{% static resistor4band_image %}" alt='{{ band.alt }}'>
+      <img id="image2" src="{% static band1  %}"  alt='{{ band1 }}'  class="image2">
+      <img id="image3" src="{% static band2  %}"  alt='{{ band2 }}'  class="image3">
+      <img id="image4" src="{% static band3  %}"  alt='{{ band3 }}'  class="image4">
+      <img id="image5" src="{% static band4  %}"  alt='{{ band4 }}'  class="image5">
 
+      
+  </div>
 
-            <tr>
-                <td>&nbsp;</td>
-                <td><input hidden type="submit" value="click here"></td>
-
-
-
-
-            </tr>
-        </table>
-
-
-    </form>
-
-    {% autoescape off %}
-    <div class="container">
-        <img src="{% static resistor4band_image %}" alt='{{ band.alt }}'>
-        <img id="image2" src="{% static band1  %}"  alt='{{ band1 }}'  class="image2">
-        <img id="image3" src="{% static band2  %}"  alt='{{ band2 }}'  class="image3">
-        <img id="image4" src="{% static band3  %}"  alt='{{ band3 }}'  class="image4">
-        <img id="image5" src="{% static band4  %}"  alt='{{ band4 }}'  class="image5">
-
-        <a class ="nav" href="/">Home</a>
-        <a class ="nav2" href="https://github.com/alfloyd71/ResistorColorBands">GitHub Repository</a>
-    </div>
-    {% endautoescape %}
-
+  {% endautoescape %}
     
-       <p>
-         <strong>Page last updated:    {{last_updated}}</strong>
-        </p>
+
 
 <script>
 //get image elements
@@ -549,6 +539,7 @@ function changeColor() {
 
 
 </script>
+
 </body>
 
 </html>
