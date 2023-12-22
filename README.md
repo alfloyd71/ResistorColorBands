@@ -11,7 +11,7 @@ be used freely. The only requirement for this repository is Django as Javascript
 
 To see a working example of this repository written in Django and Javascript you can visit the webpage here:
 
-https://alfloyd.pythonanywhere.com/resistorcolorbands/ 
+https://www.freesmartphoneapps.com/resistorcolorbands 
 
 
 P.S. 
