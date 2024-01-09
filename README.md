@@ -9,11 +9,6 @@ programming languages because they are both good at what they were designed to d
 be used freely. The only requirement for this repository is Django as Javascript can be run inside of any html page. All the files needed for this app are in the folder called 'rcb'.
 
 
-To see a working example of this repository written in Django and Javascript you can visit the webpage here:
-
-https://www.freesmartphoneapps.com/resistorcolorbands 
-
-
 P.S. 
 "I resolved a bug in my app, Resistor Color Bands, where images were appearing scrambled on mobile devices, ensuring it is now optimized and user-friendly for mobile platforms."
 
