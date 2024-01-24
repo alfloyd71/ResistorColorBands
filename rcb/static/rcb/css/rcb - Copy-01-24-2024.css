@@ -3,31 +3,31 @@ body {
     /*background-color: aqua;*/
   }
 
-  #resistorimg{
-    border: 0px solid black;
-  }
-
-
+.container {
+    position: fixed;
+    left: 0%;
+    top: 60%;
+}
   .image2 {/* band1 */
       /*display:inline;*/
       display: inline;
       position: absolute;
-      left: -30px;
+      left: 0px;
   }
   .image3 {/* band2 */
       display: inline;
       position: absolute;
-      left: -30px;
+      left: 0px;
   }
   .image4 {/* band3 */
       display: inline;
       position: absolute;
-      left: -30px;
+      left: 0px;
   }
   .image5 {/* band4 */
       display: inline;
       position: absolute;
-      left: -30px;
+      left: 0px;
   }
 
   
@@ -107,7 +107,3 @@ body {
     background: rgb(192,192,192);
     color:black
   }
-
-#id_resistancevalue{
-  width: 50%;
-}

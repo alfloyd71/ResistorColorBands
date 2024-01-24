@@ -332,7 +332,7 @@ def resistor_ccodes(request):
     band2pth="rcb/images/fourbands/secondband/"
     band3pth="rcb/images/fourbands/thirdband/"
     
-    resistor4band_image = "rcb/images/fourbands/resistor_4band/resistor_4bands_mod8.png"
+    resistor4band_image = "rcb/images/fourbands/resistor_4band/resistor-4bands.png"
     
     
     context = {'submitted':submitted,'last_updated': last_updated, 
@@ -354,5 +354,5 @@ def resistor_ccodes(request):
 
 
                }
-    return render(request,"rcb/rcb_mod.html", context)
+    return render(request,"rcb/index.html", context)
     #return render(request, 'sitemap.xml', {"foo": "bar"}, content_type="application/xhtml+xml")

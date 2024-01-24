@@ -12,16 +12,27 @@
 
 </head>
 <body>
+<style nonce="{{ request.csp_nonce }}">
 
+  #table1{
+    padding-top: 10%;
+  }
+  #firstbandth #secondbandth #thirdbandth #fourthbandth{
+    padding-bottom:10% ;
+  }
+  #firstbandtd #secondbandtd #thirdbandtd #fourthbandtd{
+    padding-bottom:10% ;
+  }
+</style>
 <a class ="nav" href="/">Home</a>
-<a class ="nav2" href="https://github.com/alfloyd71/ResistorColorBands">GitHub Repository</a>
-  <table style="padding-top: 10%;">
+<a target="”_blank”" rel="noopener" class ="nav2" href="https://github.com/alfloyd71/ResistorColorBands">GitHub Repository</a>
+  <table id="table1">
     <form action="" enctype ='multipart/form-data' method = "post" novalidate>
         {% csrf_token %}
-        
+
             <tr>
-                <th style="padding-bottom: 10%;"><label for="id_firstband">First Band:</label></th>
-                <td  style="padding-bottom: 10%;">
+                <th id="firstbandth"><label for="id_firstband">First Band:</label></th>
+                <td>
 
                   <select name="firstband" id="id_firstband" onchange="changeColor()">
 
@@ -77,10 +88,10 @@
 
                 </td>
               </tr>
-              
+
               <tr>
-                <th style="padding-bottom: 10%;"><label for="id_secondband">Second Band:</label></th>
-                <td style="padding-bottom: 10%;">
+                <th id="secondbandth"><label for="id_secondband">Second Band:</label></th>
+                <td id="secondbandtd">
 
                   <select onchange="changeColor()" name="secondband" id="id_secondband">
               <option value="Black"
@@ -140,8 +151,8 @@
               </tr>
 
               <tr>
-                <th style="padding-bottom: 10%;"><label for="id_thirdband">Multiplier:</label></th>
-                <td style="padding-bottom: 10%;">
+                <th id="thirdbandth"><label for="id_thirdband">Multiplier:</label></th>
+                <td id="thirdbandtd">
 
                   <select onchange="changeColor()" name="thirdband" id="id_thirdband">
               <option value="Black"
@@ -211,8 +222,8 @@
               </tr>
 
               <tr>
-                <th style="padding-bottom: 10%;"><label for="id_fourthband">Tolerance:</label></th>
-                <td style="padding-bottom: 10%;">
+                <th id="fourthbandth" ><label for="id_fourthband">Tolerance:</label></th>
+                <td id="fourthbandtd">
 
                   <select onchange="changeColor()" name="fourthband" id="id_fourthband">
               <option value="Brown"
@@ -271,13 +282,13 @@
 
 
 
-                
+
 </form>
 </td>
 </tr>
   </table>
 
-  
+
   {% autoescape off %}
 
   <div class="container">
@@ -287,19 +298,25 @@
       <img id="image4" src="{% static band3  %}"  alt='{{ band3 }}'  class="image4">
       <img id="image5" src="{% static band4  %}"  alt='{{ band4 }}'  class="image5">
 
-      
+
   </div>
 
   {% endautoescape %}
-    
 
 
-<script>
+
+<script nonce="{{ request.csp_nonce }}">
 //get image elements
 band_01=document.getElementById("image2")
 band_02=document.getElementById("image3")
 band_03=document.getElementById("image4")
 band_04=document.getElementById("image5")
+
+// add event handlers for a selection change(onchange) event changeColor
+document.getElementById("id_firstband").onchange=changeColor
+document.getElementById("id_secondband").onchange=changeColor
+document.getElementById("id_thirdband").onchange=changeColor
+document.getElementById("id_fourthband").onchange=changeColor
 
 //get text element id_resistancevalue
 resistance_text_element=document.getElementById("id_resistancevalue")
@@ -325,158 +342,158 @@ document.getElementById("id_fourthband").value=*/
 
 
 function changeColor() {
-  
+
   band_01_select_value = document.getElementById("id_firstband").value;
   band_02_select_value = document.getElementById("id_secondband").value;
   band_03_select_value = document.getElementById("id_thirdband").value;
   band_04_select_value = document.getElementById("id_fourthband").value;
 
   //document.getElementById("demo").innerHTML = "You selected: "+band_04_select_value;
-  
-  
+
+
   switch(band_01_select_value){
-    case "Black": 
+    case "Black":
       band_01.src="{% static 'rcb/images/fourbands/firstband/black_firstband_mod4.png' %}"
       band1str="0"
       break
-    case "Brown": 
+    case "Brown":
       band_01.src="{% static 'rcb/images/fourbands/firstband/brown_firstband_mod4.png' %}"
       band1str="1"
       break
-    case "Red": 
+    case "Red":
       band_01.src="{% static 'rcb/images/fourbands/firstband/red_firstband_mod4.png' %}"
       band1str="2"
       break
-    case "Orange": 
+    case "Orange":
       band_01.src="{% static 'rcb/images/fourbands/firstband/orange_firstband_mod4.png' %}"
       band1str="3"
       break
-    case "Yellow": 
+    case "Yellow":
       band_01.src="{% static 'rcb/images/fourbands/firstband/yellow_firstband_mod4.png' %}"
       band1str="4"
       break
-    case "Green": 
+    case "Green":
       band_01.src="{% static 'rcb/images/fourbands/firstband/green_firstband_mod5.png' %}"
       band1str="5"
       break
-    case "Blue": 
+    case "Blue":
       band_01.src="{% static 'rcb/images/fourbands/firstband/blue_firstband_mod4.png' %}"
       band1str="6"
       break
-    case "Violet": 
+    case "Violet":
       band_01.src="{% static 'rcb/images/fourbands/firstband/violet_firstband_mod4.png' %}"
       band1str="7"
       break
-    case "Grey": 
+    case "Grey":
       band_01.src="{% static 'rcb/images/fourbands/firstband/grey_firstband_mod4.png' %}"
       band1str="8"
       break
-    case "White": 
+    case "White":
       band_01.src="{% static 'rcb/images/fourbands/firstband/white_firstband_mod4.png' %}"
       band1str="9"
       break
   }
 
   switch(band_02_select_value){
-    case "Black": 
+    case "Black":
       band_02.src="{% static 'rcb/images/fourbands/secondband/black_secondband_mod4.png' %}"
       band2str="0"
       break
-    case "Brown": 
+    case "Brown":
       band_02.src="{% static 'rcb/images/fourbands/secondband/brown_secondband_mod4.png' %}"
       band2str="1"
       break
-    case "Red": 
+    case "Red":
       band_02.src="{% static 'rcb/images/fourbands/secondband/red_secondband_mod4.png' %}"
       band2str="2"
       break
-    case "Orange": 
+    case "Orange":
       band_02.src="{% static 'rcb/images/fourbands/secondband/orange_secondband_mod4.png' %}"
       band2str="3"
       break
-    case "Yellow": 
+    case "Yellow":
       band_02.src="{% static 'rcb/images/fourbands/secondband/yellow_secondband_mod4.png' %}"
       band2str="4"
       break
-    case "Green": 
+    case "Green":
       band_02.src="{% static 'rcb/images/fourbands/secondband/green_secondband_mod5.png' %}"
       band2str="5"
       break
-    case "Blue": 
+    case "Blue":
       band_02.src="{% static 'rcb/images/fourbands/secondband/blue_secondband_mod4.png' %}"
       band2str="6"
       break
-    case "Violet": 
+    case "Violet":
       band_02.src="{% static 'rcb/images/fourbands/secondband/violet_secondband_mod4.png' %}"
       band2str="7"
       break
-    case "Grey": 
+    case "Grey":
       band_02.src="{% static 'rcb/images/fourbands/secondband/grey_secondband_mod4.png' %}"
       band2str="8"
       break
-    case "White": 
+    case "White":
       band_02.src="{% static 'rcb/images/fourbands/secondband/white_secondband_mod4.png' %}"
       band2str="9"
       break
   }
 
   switch(band_03_select_value){
-    case "Black": 
+    case "Black":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/black_thirdband_mod4.png' %}"
       band3float=1
       ohms="Ω"
       break
-    case "Brown": 
+    case "Brown":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/brown_thirdband_mod4.png' %}"
       band3float=10
       ohms="0Ω"
       break
-    case "Red": 
+    case "Red":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/red_thirdband_mod4.png' %}"
       band3float=100
       ohms="00Ω"
       break
-    case "Orange": 
+    case "Orange":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/orange_thirdband_mod4.png' %}"
       band3float=1000
       ohms="kΩ"
       break
-    case "Yellow": 
+    case "Yellow":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/yellow_thirdband_mod7.png' %}"
       band3float=10000
       ohms="0kΩ"
       break
-    case "Green": 
+    case "Green":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/green_thirdband_mod4.png' %}"
       band3float=100000
       ohms="00kΩ"
       break
-    case "Blue": 
+    case "Blue":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/blue_thirdband_mod4.png' %}"
       band3float=1000000
       ohms="MΩ"
       break
-    case "Violet": 
+    case "Violet":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/violet_thirdband_mod4.png' %}"
       band3float=10000000
       ohms="0MΩ"
       break
-    case "Grey": 
+    case "Grey":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/grey_thirdband_mod4.png' %}"
       band3float=100000000
       ohms="00MΩ"
       break
-    case "White": 
+    case "White":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/white_thirdband_mod4.png' %}"
       band3float=1000000000
       ohms="GΩ"
       break
-    case "Gold": 
+    case "Gold":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/gold_thirdband_mod4.png' %}"
       band3float=.1
       ohms="Ω"
       break
-    case "Silver": 
+    case "Silver":
       band_03.src="{% static 'rcb/images/fourbands/thirdband/silver_thirdband_mod4.png' %}"
       band3float=.01
       ohms="Ω"
@@ -484,28 +501,28 @@ function changeColor() {
   }
 
   switch(band_04_select_value){
-    case "Brown": 
+    case "Brown":
       band_04.src="{% static 'rcb/images/fourbands/fourthband/brown_mod4.png' %}"
       break
-    case "Red": 
+    case "Red":
       band_04.src="{% static 'rcb/images/fourbands/fourthband/red_mod4.png' %}"
       break
-    case "Green": 
+    case "Green":
       band_04.src="{% static 'rcb/images/fourbands/fourthband/green_mod4.png' %}"
       break
-    case "Blue": 
+    case "Blue":
       band_04.src="{% static 'rcb/images/fourbands/fourthband/blue_mod4.png' %}"
       break
-    case "Violet": 
+    case "Violet":
       band_04.src="{% static 'rcb/images/fourbands/fourthband/violet_mod4.png' %}"
       break
-    case "Grey": 
+    case "Grey":
       band_04.src="{% static 'rcb/images/fourbands/fourthband/grey_mod4.png' %}"
       break
-    case "Gold": 
+    case "Gold":
       band_04.src="{% static 'rcb/images/fourbands/fourthband/gold_mod4.png' %}"
       break
-    case "Silver": 
+    case "Silver":
       band_04.src="{% static 'rcb/images/fourbands/fourthband/silver_mod4.png' %}"
       break
   }
@@ -514,7 +531,7 @@ function changeColor() {
     str=band1str+band2str
 
     calculated=(parseInt(str)*band3float).toString()+ohms
-    resistance_text_element.value=calculated 
+    resistance_text_element.value=calculated
   }
 
   else{
@@ -526,14 +543,14 @@ function changeColor() {
     if (calculated=="1000Ω"){ calculated = "1kΩ" }
     if (calculated=="1000kΩ"){ calculated="1MΩ" }
     if (calculated=="1000MΩ"){ calculated="1GΩ" }
-    resistance_text_element.value=calculated 
-    
+    resistance_text_element.value=calculated
+
 
   }
 
-  
-  
- 
+
+
+
 
 }
 
