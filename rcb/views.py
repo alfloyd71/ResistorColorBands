@@ -294,6 +294,7 @@ def resistor_ccodes(request):
                     calculated=str(round(c,2))+ohms
                 else:
                     calculated=str(round(c,1))+ohms
+                    print('calculated rounded equals ',calculated)
             else:
                 calculated=str(int(band1str+band2str))+ohms
 
