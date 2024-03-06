@@ -6,9 +6,9 @@
     
     <meta charset="UTF-8">
     <title>
-      {% block title %}
-        Free Smartphone Apps - Projects       
-      {% endblock %}
+    {% block title %}
+     
+    {% endblock %}
     </title>
     
     {% block metatags%}
@@ -52,7 +52,7 @@
 {% block navbar %}
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><img width ="100%" height="100%" src="{% static 'projects/images/icons/bars-solid-black.svg' %}"></span>
+    <span class="navbar-toggler-icon"><img width ="100%" height="100%" src="{% static 'rcb/images/icons/bars-solid-black.svg' %}"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
 
@@ -64,63 +64,16 @@
    
     </ul>
   </div>
-
-
-
-  
-
 </nav>
 {% endblock %}
 {% block content %}
 {% endblock %}
 
- {% block footer %}
+{% block footer %}
+{% endblock %}
 
-    <footer class="footer py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mb-4 mx-auto text-center">
-           
-            <a href="javascript:;" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                About Me 
-            </a>
-      
-            <a href="javascript:;" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                Products 
-            </a>
-
-            <a href="https://whereisthatbibleverse.com/" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                Blog 
-            </a>
-         
-        </div>
-          <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
-             
-              <a target="”_blank”" rel="noopener" href="https://twitter.com/alfloyd71" class="text-secondary me-xl-4 me-4">
-                  <span class="text-lg fab fa-twitter" aria-hidden="true"></span>
-              </a>
-              <a target="”_blank”" rel="noopener" href="https://www.instagram.com/alfloyd71" class="text-secondary me-xl-4 me-4">
-                  <span class="text-lg fab fa-instagram" aria-hidden="true"></span>
-              </a>
-            
-              <a target="”_blank”" rel="noopener" href="https://github.com/alfloyd71" class="text-secondary me-xl-4 me-4">
-                  <span class="text-lg fab fa-github" aria-hidden="true"></span>
-              </a>
-          </div>
-      </div>
-        <div class="row">
-          <div class="col-8 mx-auto text-center mt-1">
-              <p class="mb-0 text-secondary">
-                  2023 Software by Allen Floyd.
-              </p>
-          </div>
-        </div>
-      </div>
-  </footer>
-  {% endblock %}
-
-  {% block script %}
-  {% endblock %}
+{% block script %}
+{% endblock %}
 
 </body>
 </html>

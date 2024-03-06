@@ -7,23 +7,13 @@ Resistor Color Bands - 4 band Resistor Color Code Converter and Calculator examp
 {% endblock %}
 
 {% block metatags%}
-    <meta name="description" content="a free open source converter using Django's web framework along with Javascript front and backend.">
+    <meta name="description" content="RCB is a free open source converter using Django's web framework backend along with Javascript as the frontend.">
 
 {% endblock %}
 
 
 {% block favicon %}
-    <!-- Base Favicon -->
-    <link rel="icon" id="favicon" href="{% static 'projects/images/icons/favicon.ico' %}" type="image/x-icon">
-
-    <!-- Placeholder for JavaScript -->
-    <script nonce="{{ request.csp_nonce }}">
-      // Example: Change favicon for the home page
-      if (window.location.pathname === '/gpsconverter/') {
-          document.getElementById('favicon').setAttribute('href', "{% static 'projects/images/icons/gpsconverterfavicon.ico' %}");
-      }
-      // Add similar conditions for other pages as needed
-    </script>
+    
   
 {% endblock %}
 
@@ -35,12 +25,7 @@ Resistor Color Bands - 4 band Resistor Color Code Converter and Calculator examp
 
 <div class="container">
 
-<!-- Container for dynamically created navigation bar -->
-<div class = "topnav" id="navbar-container"></div>
-
-
-
-  <h1>Resistor Color Bands</h1> RCB comes with a GNU GENERAL PUBLIC LICENSE and all of the source code is available at <a target="”_blank”" rel="noopener" href="https://github.com/alfloyd71/ResistorColorBands">https://github.com/alfloyd71/ResistorColorBands</a>. 
+<h1>Resistor Color Bands</h1> RCB comes with a GNU GENERAL PUBLIC LICENSE and all of the source code is available at <a target="”_blank”" rel="noopener" href="https://github.com/alfloyd71/ResistorColorBands">https://github.com/alfloyd71/ResistorColorBands</a>. 
   <!-- First Row -->
   <!-- add first row with 2 columns-->
   <div class="row">
@@ -374,7 +359,7 @@ Resistor Color Bands - 4 band Resistor Color Code Converter and Calculator examp
         <div class="row">
           <div class="col-8 mx-auto text-center mt-1">
               <p class="mb-0 text-secondary">
-                  &copy2024 FreeSmartphoneApps.com
+                  &copy2024 MyWebsite.com
               </p>
           </div>
         </div>
