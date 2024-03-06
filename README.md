@@ -8,6 +8,9 @@ shines because you can run animations and select option events without having to
 programming languages because they are both good at what they were designed to do. Someone who is new to Javascript and/or Django might fine this app useful, all of the code is open source and can
 be used freely. The only requirement for this repository is Django as Javascript can be run inside of any html page. All the files needed for this app are in the folder called 'rcb'.
 
+![ResistorColorBands.png](https://www.freesmartphoneapps.com/static/projects/images/ResistorColorBands.png)
+
+
 https://www.freesmartphoneapps.com/resistorcolorbands/
 
 
