@@ -4,7 +4,7 @@ from .forms import RCBForm
 from django.http import  HttpResponseRedirect, HttpResponse
 
 # Create your views here.
-def resistor_ccodes(request):
+def getResistorColorCodes(request):
     last_updated="Today's date"
     resistor4band_image = ""
     firstband='Brown'
