@@ -12,11 +12,3 @@ be used freely. The only requirement for this repository is Django as Javascript
 
 
 https://www.freesmartphoneapps.com/resistorcolorbands/
-
-
-P.S. 
-"I resolved a bug in my app, Resistor Color Bands, where images were appearing scrambled on mobile devices, ensuring it is now optimized and user-friendly for mobile platforms."
-
-
-
-
