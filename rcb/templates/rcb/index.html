@@ -28,13 +28,13 @@ Resistor Color Bands - 4 band Resistor Color Code Converter and Calculator examp
 
 <h1>Resistor Color Bands</h1> RCB comes with a GNU GENERAL PUBLIC LICENSE and all of the source code is available at <a target="”_blank”" rel="noopener" href="https://github.com/alfloyd71/ResistorColorBands">https://github.com/alfloyd71/ResistorColorBands</a>. 
   <!-- First Row -->
-  <!-- add first row with 2 columns-->
+  <!-- add first row spanning 6 of the 12 columns in the grid system-->
   <div class="row">
     <div class="col-sm-6">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title"></h5>
-                <p class="card-text"><!-- Your form starts here -->
+                <p class="card-text">
                   <table id="table1">
                     <form action="" enctype ='multipart/form-data' method = "post" novalidate>
                         {% csrf_token %}
@@ -300,6 +300,7 @@ Resistor Color Bands - 4 band Resistor Color Code Converter and Calculator examp
             </div>
         </div>
     </div>
+    <!--add 6 more columns to complete the 12 columns in the grid system-->
     <div class="col-sm-6">
         <div class="card">
             <div class="card-body">
@@ -311,13 +312,14 @@ Resistor Color Bands - 4 band Resistor Color Code Converter and Calculator examp
     </div>
 </div>
 
-<!-- add second row with 2 columns-->
+<!-- add second row -->
 <div class="row">
+  <!-- this div spans 6 columns -->
   <div class="col-sm-6">
       <div class="card">
           <div class="card-body">
               <h5 class="card-title"></h5>
-              <p class="card-text"><!-- resistor4band_image goes here -->
+              <p class="card-text">
                 {% autoescape off %}
 
                 <div class="container">
@@ -335,6 +337,7 @@ Resistor Color Bands - 4 band Resistor Color Code Converter and Calculator examp
           </div>
       </div>
   </div>
+  <!-- this div with 6 columns completes the 12 column grid system -->
   <div class="col-sm-6">
       <div class="card">
           <div class="card-body">
@@ -600,7 +603,6 @@ Resistor Color Bands - 4 band Resistor Color Code Converter and Calculator examp
         if(band_03_select_value=="Gold"){
           // round  to precision 1 decimal point(e.g, 1.9000000000000001Ω becomes 1.9Ω)
           let roundedCalculated=parseFloat(calculated).toFixed(1)
-          console.log('roundedCalculated to precision 1 equals ',roundedCalculated)
           calculated=roundedCalculated+'Ω'
         }
         
