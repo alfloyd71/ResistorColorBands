@@ -15,29 +15,14 @@
     
     {% block base_metatags %}
     <meta name="viewport" content="user-scalable=no width=device-width, initial-scale=1.0">
-    
 
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
    
     <!--<link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-svg.css" rel="stylesheet" />-->
-    <!--<link rel="stylesheet" href="{% static 'rcb/assets/css/theme.css' %}">
-    <link rel="stylesheet" href="{% static 'rcb/assets/css/loopple/loopple.css' %}">-->
-
-    <!--bootstrap minified reduced size css version-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-<!--links to javascript files-->
-<!--the latest version jquery 3.5 should come before bootstap-min.js-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<!--Popper.js is a popular JavaScript library used for positioning tooltips and popovers in web applications.-->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-<!--default Bible verses are in questions.js code snippet-->
-<script src="{% static 'bibleflashcardsjs/js/questions.js' %}"></script>  
-
+    <link rel="stylesheet" href="{% static 'rcb/assets/css/theme.css' %}">
+    <link rel="stylesheet" href="{% static 'rcb/assets/css/loopple/loopple.css' %}">
     <link rel="stylesheet" href="{% static 'rcb/css/rcb.css' %}" >
 
     <!-- bootstrap javascript for responsive mobile navbar-->
@@ -86,22 +71,30 @@ a{
 
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'getResistorColorCodes' %}">Home</a>
+            <a class="nav-link" href="{% url 'all_projects' %}">Home</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'convertGPS' %}">GPS Converter</a>
       </li>
-  
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'getSynsets' %}">Wordnet Synsets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'getResistorColorCodes' %}">Resistor Color Bands</a>
+      </li>
    
     </ul>
   </div>
 </nav>
-{% endblock navbar %}
+{% endblock %}
 {% block content %}
-{% endblock content %}
+{% endblock %}
 
 {% block footer %}
-{% endblock footer %}
+{% endblock %}
 
 {% block script %}
-{% endblock script %}
+{% endblock %}
 
 </body>
 </html>
