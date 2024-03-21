@@ -11,4 +11,4 @@ be used freely. The only requirement for this repository is Django as Javascript
 ![ResistorColorBands.png](https://www.freesmartphoneapps.com/static/projects/images/ResistorColorBands.png)
 
 
-https://www.freesmartphoneapps.com/resistorcolorbands/
+<!--https://www.freesmartphoneapps.com/resistorcolorbands/-->
