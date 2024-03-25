@@ -1,4 +1,4 @@
-# ResistorColorBands 
+# Resistor Color Bands 
 
 4 band Resistor Color Code Converter and Calculator example is a free open source converter using Django's web framework backend along with Javascript as the frontend.
 When I initially ventured into creating Windows applications with Python, it marked one of my earliest projects. The process has become significantly more streamlined with the integration of the Document Object Model (DOM) and JavaScript as the programming language.
